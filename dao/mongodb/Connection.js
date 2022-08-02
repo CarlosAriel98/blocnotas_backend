@@ -9,6 +9,7 @@ module.exports = class Connection {
       var mongoClient = await MongoClient.connect(mongoUri);
       this.db = mongoClient.db(mongoDbName);
       console.log('Connection: ', 'Creando Conexión');
+      this.getDB()
     } else {
       console.log('Connection: ', 'Usando Conexión Cacheada');
     }
